@@ -10,7 +10,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.7.10",
+        "version": "5.7.12",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -24,7 +24,7 @@
     }
   ],
   "require": {
-    "roots/soil": "3.7.1",
+    "wpackagist-plugin/disable-gutenberg": "1.6",
     "advanced-custom-fields/advanced-custom-fields-pro": "*"
   }
 }

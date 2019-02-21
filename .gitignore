@@ -5,4 +5,4 @@ wp-content
 vendor
 *.log
 .idea
-docker-compose.yml
+.env

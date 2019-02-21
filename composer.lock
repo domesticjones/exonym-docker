@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f09f0f57a98db17279b72660e1912872",
+    "content-hash": "404514a373f36926ce7f9914189ad27b",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.7.10",
+            "version": "5.7.12",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&t=5.7.10",
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&t=5.7.12",
                 "reference": null,
                 "shasum": null
             },
@@ -198,51 +198,6 @@
             "time": "2016-07-20T10:19:36+00:00"
         },
         {
-            "name": "roots/soil",
-            "version": "3.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/roots/soil.git",
-                "reference": "5b9b9d8a878b295f44b35cba826c462b20cc1d9c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/roots/soil/zipball/5b9b9d8a878b295f44b35cba826c462b20cc1d9c",
-                "reference": "5b9b9d8a878b295f44b35cba826c462b20cc1d9c",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "squizlabs/php_codesniffer": "^2.5.1"
-            },
-            "type": "wordpress-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Scott Walkinshaw",
-                    "email": "scott.walkinshaw@gmail.com",
-                    "homepage": "https://github.com/swalkinshaw"
-                },
-                {
-                    "name": "Ben Word",
-                    "email": "ben@benword.com",
-                    "homepage": "https://github.com/retlehs"
-                }
-            ],
-            "description": "A WordPress plugin which contains a collection of modules to apply theme-agnostic front-end modifications",
-            "homepage": "https://roots.io/plugins/soil/",
-            "keywords": [
-                "wordpress"
-            ],
-            "time": "2016-08-30T18:15:45+00:00"
-        },
-        {
             "name": "symfony/polyfill-ctype",
             "version": "v1.10.0",
             "source": {
@@ -350,6 +305,26 @@
                 "environment"
             ],
             "time": "2019-01-29T11:11:52+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/disable-gutenberg",
+            "version": "1.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disable-gutenberg/",
+                "reference": "tags/1.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-gutenberg.1.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disable-gutenberg/"
         }
     ],
     "packages-dev": [],
