@@ -24,10 +24,6 @@ function run_activate_plugin($plugin) {
 $activate_acf = (WP_PLUGIN_DIR . '/advanced-custom-fields-pro/acf.php');
 run_activate_plugin($activate_acf);
 
-// Activate Exonym - Your Business
-$activate_ex_business = (WP_PLUGIN_DIR . '/exonym-business/exonym-business.php');
-run_activate_plugin($activate_ex_business);
-
 // Activate Favicon Generator
 $activate_favicons = (WP_PLUGIN_DIR . '/favicon-by-realfavicongenerator/favicon-by-realfavicongenerator.php');
 run_activate_plugin($activate_favicons);

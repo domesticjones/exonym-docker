@@ -24,7 +24,9 @@
     }
   ],
   "require": {
-    "wpackagist-plugin/disable-gutenberg": "1.6",
+    "wpackagist-plugin/disable-gutenberg": "*",
+    "wpackagist-plugin/ari-adminer": "*",
+    "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
     "advanced-custom-fields/advanced-custom-fields-pro": "*"
   }
 }
