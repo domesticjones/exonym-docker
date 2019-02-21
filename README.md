@@ -1,3 +1,5 @@
+Based on https://github.com/jaredpalmer/presspack
+
 # Presspack
 
 > Make WordPress theme development great again.
