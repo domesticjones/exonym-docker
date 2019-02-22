@@ -1,9 +1,6 @@
 Based on https://github.com/jaredpalmer/presspack
 
-1. Move .env file over (ACF install)
-2. Fix upload permissions
-  - find wp-content/ -type d -exec chmod 0755 {} \;
-  - find wp-content/ -type f -exec chmod 644 {} \;
+1. Move .env file over (ACF Pro install)
 
 # Presspack
 
