@@ -5,9 +5,9 @@
 1. **Terminal:** Navigate to your working folder
 2. `git clone REPOSITORY_HERE`
 *(START: only if cloning the primary framework and starting a new project)*
-a. Rename project folder
-b. **Terminal** Navigate to renamed project folder
-c. `rm -rf .git`
+1. Rename project folder
+2. **Terminal** Navigate to renamed project folder
+3. `rm -rf .git`
   - This removes the git instance so you don't overwrite the main Framework
   - Create new repository for the project on github
   - Follow instructions to create new git instance and make repository
