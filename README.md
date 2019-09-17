@@ -47,7 +47,7 @@ Edit files and watch them update with Browsersync! It's like magic.
 Here's how to dump your local database with Docker into a `.sql` file
 
 ```aidl
-docker exec -it exonym_docker /usr/bin/mysqldump -u username -ppassword exonym-docker_wordpress_1 > backup.sql
+docker exec -it exonym_docker /usr/bin/mysqldump -u wordpress exonym-docker_wordpress_1 > backup.sql
 ```
 
 ## Local Database Restore
