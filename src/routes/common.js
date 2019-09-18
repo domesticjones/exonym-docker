@@ -1,5 +1,6 @@
+import $ from 'jquery';
+window.jQuery = $;
 require('jquery-visible');
-const $ = jQuery;
 
 export default {
   init() {

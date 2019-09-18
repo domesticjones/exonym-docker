@@ -5,7 +5,7 @@
 1. **Terminal:** Navigate to your working folder
 2. `git clone REPOSITORY_HERE`
 ---
-*(START: only if cloning the primary framework and starting a new project)*
+(START: only if cloning the primary framework and starting a new project)
 ---
 1. Rename project folder
 2. **Terminal** Navigate to renamed project folder
@@ -14,7 +14,7 @@
   - Create new repository for the project on github
   - Follow instructions to create new git instance and make repository
 ---
-*(END: only if cloning the primary framework and starting a new project)*
+(END: only if cloning the primary framework and starting a new project)
 ---
 3. **Terminal:** Navigate to root of project folder
 4. `yarn install`
