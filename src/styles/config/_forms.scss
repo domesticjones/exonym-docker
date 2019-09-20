@@ -60,7 +60,6 @@ textarea,
 select,
 option,
 optgroup,
-button,
 legend,
 fieldset {
   box-sizing: border-box;
@@ -230,6 +229,7 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 input[type="image"] {
+  display: inline-block;
   height: $fh-button-height;
   width: $fh-button-width;
   max-width: $fh-button-max-width;

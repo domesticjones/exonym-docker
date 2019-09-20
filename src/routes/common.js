@@ -1,6 +1,7 @@
 import $ from 'jquery';
 window.jQuery = $;
 require('jquery-visible');
+require('slick-carousel');
 
 export default {
   init() {
@@ -12,10 +13,9 @@ export default {
   		const $this = $(e.currentTarget);
   		$this.toggleClass('is-active');
   	});
-  },
-  finalize() {
-  	// MODULES: Parallax
+
   	$(window).on('load resize scroll', () => {
+  	   // MODULES: Parallax
   		const d_scroll = $(window).scrollTop();
   		const w_height = $(window).height();
   		$('.animate-parallax').each((i, e) => {
@@ -36,7 +36,8 @@ export default {
   			}
   		});
   	});
-
+  },
+  finalize() {
   	// MODULES: Animate onScreen
   	$(window).on('load resize scroll', () => {
   		$('.animate-on-enter').each((i, el) => {

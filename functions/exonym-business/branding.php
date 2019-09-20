@@ -8,9 +8,9 @@
   // Business Name
   function ex_brand($type = 'name') {
     if ($type == 'name') {
-      the_field('business_name', 'options');
+      get_field('business_name', 'options');
     } elseif ($type == 'legal') {
-      the_field('legal_name', 'options');
+      get_field('legal_name', 'options');
     }
   }
 
@@ -19,5 +19,5 @@
     $logoTable = get_field('logo', 'options');
     $logoChosen = $logoTable[$style][$color];
     $logo = $logoChosen['sizes'][$size];
-    echo $logo;
+    return $logo;
   }
