@@ -1,6 +1,15 @@
 /**
   Clearfix
   ---------------------------------------------------------------------- */
+@mixin pseudo($display: block, $pos: relative, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+/**
+  Clearfix
+  ---------------------------------------------------------------------- */
 @mixin clearfix() {
   *zoom: 1;
   clear: both;

@@ -181,6 +181,6 @@ blockquote {
   }
 
   &::after {
-    content: '';
+    @include pseudo();
   }
 }
