@@ -5,14 +5,6 @@
 ==========================================
 */
 
-// Add HTML5 and Media Query support for IE (NOTE: init)
-function add_ie_html5_shim () {
-  echo '<!--[if lt IE 9]>';
-  echo '<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>';
-  echo '<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>';
-  echo '<![endif]-->';
-}
-
 // Remove jQuery Migrate because we have eslint telling us everything we did wrong (NOTE: init)
 function remove_jquery_migrate($scripts) {
    if(is_admin()) return;

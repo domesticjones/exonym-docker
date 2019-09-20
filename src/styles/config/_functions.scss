@@ -1,34 +1,20 @@
 /**
   Link Coloring in all States
   ---------------------------------------------------------------------- */
-@mixin linkArrayStatic($color: inherit, $el: a) {
-  #{$el},
-  #{$el}:link,
-  #{$el}:visited {
-    color: $color;
-  }
-}
-
-@mixin linkArrayHover($color: inherit, $el: a) {
-  #{$el}:hover,
-  #{$el}:focus,
-  #{$el}:active {
-    color: $color;
-  }
-}
+$linkArrayStatic: ['', ':link', ':visited'];
+$linkArrayHover: [':hover', ':focus', ':active'];
 
 @mixin linkColor($color: inherit, $state: all, $el: a) {
   @if $state == all {
-    @include linkArrayStatic();
-    @include linkArrayHover();
+    @each $state in $linkArrayStatic { #{$el}#{$state} { color: $color; } }
+    @each $state in $linkArrayHover { #{$el}#{$state} { color: $color; } }
   }
-
   @else if $state == static {
-    @include linkArrayStatic();
+    @each $state in $linkArrayStatic { #{$el}#{$state} { color: $color; } }
   }
 
   @else if $state == hover {
-    @include linkArrayHover();
+    @each $state in $linkArrayHover { #{$el}#{$state} { color: $color; } }
   }
 }
 
