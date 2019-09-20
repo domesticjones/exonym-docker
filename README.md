@@ -4,8 +4,9 @@
 ## First Time Setup
 1. **Terminal:** Navigate to your working folder
 2. `git clone REPOSITORY_HERE`
----
-(START: only if cloning the primary framework and starting a new project)
+
+
+**(START: only if cloning the primary framework and starting a new project)**
 ---
 1. Rename project folder
 2. **Terminal** Navigate to renamed project folder
@@ -14,11 +15,12 @@
   - Create new repository for the project on github
   - Follow instructions to create new git instance and make repository
 ---
-(END: only if cloning the primary framework and starting a new project)
----
+**(END: only if cloning the primary framework and starting a new project)**
+
+
 3. **Terminal:** Navigate to root of project folder
 4. `yarn install`
-5. Copy .env file into (ACF Pro install)
+5. Copy .env file into project folder root (ACF Pro install)
 6. `composer install`
 7. `docker-compose up`
 8. `yarn start`

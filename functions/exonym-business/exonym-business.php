@@ -15,7 +15,6 @@
   }
 
   // All Components
-  require_once('fields.php');
   require_once('branding.php');
   require_once('contact.php');
   require_once('social.php');
