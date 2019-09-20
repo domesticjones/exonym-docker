@@ -1,41 +1,12 @@
 /**
   Global Body & Wrappers
   ---------------------------------------------------------------------- */
-html,
-body {
-  max-width: 100%;
-}
+
 
 .wrap {
   margin: 0 auto;
   max-width: 100%;
   position: relative;
-}
-
-/**
-  Global Link Defaults
-  ---------------------------------------------------------------------- */
-a {
-  text-decoration: none;
-}
-
-@include linkColor($red, static);
-@include linkColor($blue, hover);
-
-
-/**
-  Wordpress Image Alignment
-  ---------------------------------------------------------------------- */
-.aligncenter {
-  margin: 1em auto;
-}
-
-.alignleft {
-  margin: 1em 1em 1em 0;
-}
-
-.alignright {
-  margin: 1em 0 1em 1em;
 }
 
 /**

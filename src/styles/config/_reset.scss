@@ -130,14 +130,7 @@ ul {
 blockquote,
 q {
   quotes: none;
-}
-
-blockquote::before,
-blockquote::after,
-q::before,
-q::after {
-  content: "";
-  content: none;
+  @include clearfix();
 }
 
 table {
@@ -174,28 +167,6 @@ figure {
     width: 100%;
     height: 100%;
   }
-}
-
-/**
-  Clearfix
-  ---------------------------------------------------------------------- */
-
-@mixin clearfix() {
-  *zoom: 1;
-  clear: both;
-
-  &::before,
-  &::after {
-    content: "";
-    display: table;
-    line-height: 0;
-    clear: both;
-  }
-}
-
-.cf,
-.clearfix {
-  @include clearfix;
 }
 
 /**

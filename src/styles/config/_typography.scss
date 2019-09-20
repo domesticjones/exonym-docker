@@ -78,13 +78,7 @@ small {
 /**
   Body Typography Defaults
   ---------------------------------------------------------------------- */
-body {
-  color: $black;
-  line-height: 1;
-  font-size: $font-size;
-  font-family: $font-default;
-  font-weight: $font-normal;
-}
+
 
 /**
   Global Website Headings
@@ -177,7 +171,7 @@ blockquote {
   position: relative;
 
   &::before {
-    content: "\201C";
+    content: '\201C';
     font-family: Georgia, serif;
     font-size: 4em;
     font-weight: bold;
@@ -187,6 +181,6 @@ blockquote {
   }
 
   &::after {
-    content: "";
+    content: '';
   }
 }

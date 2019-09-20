@@ -165,7 +165,7 @@
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       box-sizing: border-box;
       width: ($sizeBaseline * 1.4);

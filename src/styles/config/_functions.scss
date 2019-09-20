@@ -1,4 +1,20 @@
 /**
+  Clearfix
+  ---------------------------------------------------------------------- */
+@mixin clearfix() {
+  *zoom: 1;
+  clear: both;
+
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+    line-height: 0;
+    clear: both;
+  }
+}
+
+/**
   Link Coloring in all States
   ---------------------------------------------------------------------- */
 $linkArrayStatic: ['', ':link', ':visited'];

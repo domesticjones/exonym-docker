@@ -14,6 +14,9 @@ export default {
   		$this.toggleClass('is-active');
   	});
 
+    $('#slider-test').slick();
+    //$('body').fadeOut();
+
   	$(window).on('load resize scroll', () => {
   	   // MODULES: Parallax
   		const d_scroll = $(window).scrollTop();
