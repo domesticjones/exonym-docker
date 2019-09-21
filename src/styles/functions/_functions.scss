@@ -1,10 +1,72 @@
 /**
-  Clearfix
+  Responsive Breakpoints
   ---------------------------------------------------------------------- */
-@mixin pseudo($display: block, $pos: relative, $content: ''){
+$breakpoints: (
+  'phone':        400px,
+  'phone-wide':   480px,
+  'phablet':      560px,
+  'tablet-small': 640px,
+  'tablet':       768px,
+  'tablet-wide':  1024px,
+  'desktop':      1248px,
+  'desktop-wide': 1440px
+);
+@mixin responsive($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == min {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+/**
+  Pseudo Elements
+  ---------------------------------------------------------------------- */
+@mixin pseudo($display: block, $pos: relative, $content: '') {
   content: $content;
   display: $display;
   position: $pos;
+}
+
+/**
+  Accessibility Hide
+  ---------------------------------------------------------------------- */
+%visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+/**
+  Enable Hardware Accelleration
+  ---------------------------------------------------------------------- */
+@mixin hardware($backface: true, $perspective: 1000) {
+  @if $backface {
+    backface-visibility: hidden;
+  }
+  perspective: $perspective;
+}
+
+/**
+  Clean Positioning
+  ---------------------------------------------------------------------- */
+@mixin position($pos, $t, $r, $b, $l, $z: false, $hardware: true) {
+  @if $pos == fixed and $hardware { @include hardware; }
+  @if $pos { position: $pos; }
+  @if $t { top: $t; }
+  @if $r { right: $r; }
+  @if $b { bottom: $b; }
+  @if $l { left: $l; }
+  @if $z { z-index: $z; }
 }
 
 /**
@@ -24,6 +86,13 @@
 }
 
 /**
+  Create any kind of gradient easily
+  ---------------------------------------------------------------------- */
+@mixin gradient($type, $orientation, $colors) {
+  background-image: #{$type}-gradient($orientation, unquote($colors));
+}
+
+/**
   Link Coloring in all States
   ---------------------------------------------------------------------- */
 $linkArrayStatic: ['', ':link', ':visited'];
@@ -37,10 +106,19 @@ $linkArrayHover: [':hover', ':focus', ':active'];
   @else if $state == static {
     @each $state in $linkArrayStatic { #{$el}#{$state} { color: $color; } }
   }
-
   @else if $state == hover {
     @each $state in $linkArrayHover { #{$el}#{$state} { color: $color; } }
   }
+}
+
+/**
+  Truncate Text
+  ---------------------------------------------------------------------- */
+@mixin truncate($truncation-boundary: 100%) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /**

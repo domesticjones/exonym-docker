@@ -39,23 +39,10 @@
 }
 
 #responsive-nav-toggle {
+  @include hamburgerMenu(12, $blue, 0.6);
   display: none;
-}
 
-/**
-  Responsive Breakpoints
-  ---------------------------------------------------------------------- */
-@media (max-width: 1024px) {
-  .header-top {
-    padding: 1rem;
-  }
-
-  .nav-header,
-  .header-top .nav-social {
-    display: none;
-  }
-
-  #responsive-nav-toggle {
+  @include responsive('tablet-wide') {
     display: block;
   }
 }
