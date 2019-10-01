@@ -14,4 +14,5 @@
     ));
   }
 
-  require_once('url-redirects.php');
+  require_once('migration-management.php');
+  require_once('code-injections.php');
