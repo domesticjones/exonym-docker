@@ -1,8 +1,4 @@
 <?php
-	/* ===========
-		 CONTACT TAB
-		 =========== */
-
   if (!defined('WPINC')) { die; }
 
   // Inside Contact Info Display

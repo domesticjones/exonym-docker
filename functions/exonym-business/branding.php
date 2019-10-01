@@ -1,8 +1,4 @@
 <?php
-	/* ============
-		 BRANDING TAB
-		 ============ */
-
   if (!defined('WPINC')) { die; }
 
   // Business Name

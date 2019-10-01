@@ -1,7 +1,7 @@
 <?php
   if (!defined('WPINC')) { die; }
 
-  // Create Options Page
+  // Create Your Business Options Page
   if (function_exists('acf_add_options_page')) {
   	acf_add_options_page(array(
   		'page_title' 	=> 'Your Business Information',
@@ -10,7 +10,7 @@
   		'capability'	=> 'edit_posts',
   		'redirect'		=> true,
       'icon_url'    => 'dashicons-location',
-      'position'    => 2
+      'position'    => 3
   	));
   }
 

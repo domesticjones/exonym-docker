@@ -1,8 +1,4 @@
 <?php
-	/* ================
-		 SOCIAL MEDIA TAB
-		 ================ */
-
   if (!defined('WPINC')) { die; }
 
   // Display Social Icons
