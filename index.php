@@ -1,19 +1,39 @@
 <?php get_header(); ?>
 
-<div>
-  <h1>hello world!</h1>
-  <div id="slider-test">
-    <div>
-      <a href="#">Link Here</a> for a slide
-    </div>
-    <div>
-      <a href="#">Second Here</a> with other stuff
-    </div>
-    <div>
-      <a href="#">Link for the Third</a>
-    </div>
-  </div>
-  <?php echo do_shortcode('[contact-form-7 id="35" title="Contact form 1"]'); ?>
-</div>
+	<main role="main" aria-label="Content">
+		<!-- section -->
+		<section>
 
+			<h1><?php the_title(); ?></h1>
+
+		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+			<!-- article -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+				<?php the_content(); ?>
+
+
+				<?php edit_post_link(); ?>
+
+			</article>
+			<!-- /article -->
+
+		<?php endwhile; ?>
+
+		<?php else: ?>
+
+			<!-- article -->
+			<article>
+
+				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+
+			</article>
+			<!-- /article -->
+
+		<?php endif; ?>
+
+		</section>
+		<!-- /section -->
+	</main>
 <?php get_footer(); ?>

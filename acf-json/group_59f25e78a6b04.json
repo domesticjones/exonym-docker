@@ -23,7 +23,7 @@
             "label": "Business Name",
             "name": "business_name",
             "type": "text",
-            "instructions": "<code>ex_brand();<\/code><br \/>Omit things like \"llc\" or \"inc\" if it's not used in the common mention of your business.",
+            "instructions": "<code>ex_brand();<\/code><br \/><code>[business name=\"default\"]<\/code><br \/>Omit things like \"llc\" or \"inc\" if it's not used in the common mention of your business.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -42,7 +42,7 @@
             "label": "Legal Name",
             "name": "legal_name",
             "type": "text",
-            "instructions": "<code>ex_brand('legal');<\/code><br \/>Official, legal name of the business. Most commonly used in the \"Copyright\" section in the site's footer.",
+            "instructions": "<code>ex_brand('legal');<\/code><br \/><code>[business name=\"legal\"]<\/code><br \/>Official, legal name of the business. Most commonly used in the \"Copyright\" section in the site's footer.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -272,7 +272,7 @@
             "label": "Email Addresses",
             "name": "email_addresses",
             "type": "repeater",
-            "instructions": "<code>ex_contact('email', $link, 'all\/global');<\/code><br \/>General email contacts. Use the Staff plugin to create a directory.",
+            "instructions": "<code>ex_contact('email', $link, 'all\/global');<\/code><br \/><code>[business contact=\"email\"]<\/code><br \/>General email contacts. Use the Staff plugin to create a directory.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -349,7 +349,7 @@
             "label": "Phone Numbers",
             "name": "phone_numbers",
             "type": "repeater",
-            "instructions": "<code>ex_contact('phone', $link, 'all\/global');<\/code><br \/>General phone numbers. Use the Staff plugin to create a directory.",
+            "instructions": "<code>ex_contact('phone', $link, 'all\/global');<\/code><br \/><code>[business contact=\"phone\"]<\/code><br \/>General phone numbers. Use the Staff plugin to create a directory.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -427,7 +427,7 @@
             "label": "Address",
             "name": "address",
             "type": "textarea",
-            "instructions": "<code>ex_contact('address');<\/code><br \/>Address of single location.",
+            "instructions": "<code>ex_contact('address');<\/code><br \/><code>[business contact=\"address\"]<\/code><br \/>Address of primary location.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -517,6 +517,25 @@
                     "placeholder": ""
                 },
                 {
+                    "key": "field_5d92e3b7dec34",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_59f2e5e5960b6",
                     "label": "Description",
                     "name": "description",
@@ -555,5 +574,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1568778753
+    "modified": 1569910123
 }

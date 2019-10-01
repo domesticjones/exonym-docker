@@ -18,3 +18,4 @@
   require_once('branding.php');
   require_once('contact.php');
   require_once('social.php');
+  require_once('shortcodes.php');

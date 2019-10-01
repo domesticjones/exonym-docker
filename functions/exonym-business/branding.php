@@ -3,11 +3,13 @@
 
   // Business Name
   function ex_brand($type = 'name') {
+    $output = '';
     if ($type == 'name') {
-      get_field('business_name', 'options');
+      $output = get_field('business_name', 'options');
     } elseif ($type == 'legal') {
-      get_field('legal_name', 'options');
+      $output = get_field('legal_name', 'options');
     }
+    return $output;
   }
 
   // Logo

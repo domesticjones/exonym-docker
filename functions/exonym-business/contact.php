@@ -51,5 +51,5 @@
   function ex_contact($type, $link = true, $amount = 'all') {
     if ($type == 'email') { if (have_rows('email_addresses', 'options')) { ex_ContactLoop($type, $link, $amount); } }
     if ($type == 'phone') { if (have_rows('phone_numbers', 'options')) { ex_ContactLoop($type, $link, $amount); } }
-    if ($type == 'address') { get_field('address', 'options'); }
+    if ($type == 'address') { return get_field('address', 'options'); }
   }
