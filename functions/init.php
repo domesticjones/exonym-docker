@@ -1,4 +1,5 @@
 <?php
+if (!defined('WPINC')) { die; }
 /*
 =================================
   [[[  Global Theme Functions ]]]

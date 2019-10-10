@@ -1,1 +1,2 @@
-<?php //Silencio
+<?php
+if (!defined('WPINC')) { die; }

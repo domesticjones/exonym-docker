@@ -170,17 +170,13 @@ blockquote {
   margin: 0 0 1.25em 0;
   position: relative;
 
-  &::before {
-    content: '\201C';
+  @include pseudo(before, block, absolute, '\201C') {
     font-family: Georgia, serif;
     font-size: 4em;
-    font-weight: bold;
-    position: absolute;
+    @include fontBold();
     left: 0.5rem;
     top: 0.25rem;
   }
 
-  &::after {
-    @include pseudo();
-  }
+  @include pseudo(after);
 }

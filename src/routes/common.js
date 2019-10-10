@@ -14,9 +14,7 @@ export default {
   		$this.toggleClass('is-active');
   	});
 
-    $('#slider-test').slick();
-    //$('body').fadeOut();
-
+    // MODULES: Parallax Animation
   	$(window).on('load resize scroll', () => {
   	   // MODULES: Parallax
   		const d_scroll = $(window).scrollTop();
@@ -39,18 +37,21 @@ export default {
   			}
   		});
   	});
+
+    // MODULES: Add Visible Class to First Module onLoad
+    $('.module').first().addClass('is-visible');
   },
   finalize() {
   	// MODULES: Animate onScreen
   	$(window).on('load resize scroll', () => {
-  		$('.animate-on-enter').each((i, el) => {
-  			const $this = $(el);
+  		$('.animate-on-enter').each((i,e) => {
+  			const $this = $(e);
   			if ($this.visible(true)) {
   				$this.addClass('is-visible');
   			}
   		});
-  		$('.animate-on-leave').each((i, el) => {
-  			const $this = $(el);
+  		$('.animate-on-leave').each((i,e) => {
+  			const $this = $(e);
   			if (!$this.visible(true)) {
   				$this.removeClass('is-visible');
   			}

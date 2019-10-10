@@ -1,4 +1,5 @@
 <?php
+if (!defined('WPINC')) { die; }
 /*
 ========================================
   [[[  Remove Extraneous Theme Items ]]]
@@ -84,5 +85,16 @@ function remove_pages_count_columns($defaults) {
 }
 add_filter('manage_pages_columns', 'remove_pages_count_columns');
 
-// Remove CF7 extraneous wrappers
-add_filter( 'wpcf7_autop_or_not', '__return_false' );
+// CF7: Remove extraneous wrappers
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+// CF7: Only load stylesheets when necessary
+function ex_cleanCf7() {
+	global $post;
+	$cf7DefaultCheck = has_shortcode($post->post_content, 'contact-form-7');
+	if(!$cf7DefaultCheck) {
+		wp_dequeue_script('contact-form-7'); // Dequeue JS Script file.
+		wp_dequeue_style('contact-form-7');  // Dequeue CSS file.
+	}
+}
+add_filter('wp_enqueue_scripts', 'ex_cleanCf7');

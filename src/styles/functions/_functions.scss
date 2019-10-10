@@ -26,10 +26,13 @@ $breakpoints: (
 /**
   Pseudo Elements
   ---------------------------------------------------------------------- */
-@mixin pseudo($display: block, $pos: relative, $content: '') {
-  content: $content;
-  display: $display;
-  position: $pos;
+@mixin pseudo($place, $display: block, $pos: relative, $content: '') {
+  &::#{$place} {
+    content: $content;
+    display: $display;
+    position: $pos;
+    @content;
+  }
 }
 
 /**
