@@ -151,6 +151,25 @@
             "maxlength": "",
             "rows": 16,
             "new_lines": ""
+        },
+        {
+            "key": "field_5dba450e0d9d7",
+            "label": "CSS Hotfix",
+            "name": "css_hotfix",
+            "type": "textarea",
+            "instructions": "Write vanilla CSS to inject and overwrite styles. Come the next website update to the codebase, we'll incorporate these styles into the update and clear this Hotfix area.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -170,5 +189,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1569907331
+    "modified": 1572493238
 }

@@ -83,8 +83,8 @@ fieldset {
   color: $fh-font-color;
   vertical-align: top;
   display: $fh-display;
+  transition: $transition;
   @include center-layout;
-  @include transition();
 }
 
 datalist {
@@ -257,8 +257,8 @@ input[type="image"] {
   appearance: none;
   border-radius: $fh-button-border-radius;
   border: $fh-button-border-width $fh-button-border-style $fh-button-border-color;
+  transition: $transition;
   @include fontBold();
-  @include transition();
 }
 
 input[type="image"] {

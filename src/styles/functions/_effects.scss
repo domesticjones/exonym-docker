@@ -1,8 +1,3 @@
-// Mixin for creating basic transitions
-@mixin transition($transition: all 350ms ease) {
-  transition: $transition;
-}
-
 // Apply a gaussian blur to an image in px, em, rem
 @mixin filter-blur($radius) {
   filter: blur($radius);

@@ -26,7 +26,7 @@ $breakpoints: (
 /**
   Pseudo Elements
   ---------------------------------------------------------------------- */
-@mixin pseudo($place, $display: block, $pos: relative, $content: '') {
+@mixin pseudo($place, $content: '', $display: block, $pos: relative) {
   &::#{$place} {
     content: $content;
     display: $display;

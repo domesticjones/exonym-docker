@@ -8,15 +8,17 @@ if (!defined('WPINC')) { die; }
     if($classes) { array_push($classesOuter, $classes); }
     $classesInner = ['module-inner'];
     $classesInnerPrint = [];
-    $style = '';
+    $styleInline = '';
     if($position == 'start' || $position == 'start-modules') {
+      $stylesBackground = '';
+      $stylesOuterPrint = [];
+      $stylesInnerPrint = [];
       if($position == 'start-modules') {
         $size = get_sub_field('module_size');
-        $name = get_sub_field('module_id');
         $p = get_sub_field('module_padding');
         $pad = ['module-pad-t-' . $p['top'], 'module-pad-b-' . $p['bottom'], 'module-pad-l-' . $p['left'], 'module-pad-r-' . $p['right']];
         $height = $size['height']['number'];
-        if($height > 0) { $style .= ' style="min-height: ' . $height . $size['height']['measure'] . ';"'; }
+        if($height > 0) { $styleInline .= ' style="min-height: ' . $height . $size['height']['measure'] . ';"'; }
         $width = $size['width']['size'];
         $constrain = $size['width']['constrain'];
         $align = $size['width']['align'];
@@ -25,11 +27,31 @@ if (!defined('WPINC')) { die; }
         } else {
           array_push($classesInner, 'module-width-' . $width, 'module-align-' . $align);
         }
-        $classesInnerPrint = array_merge($classesInner, $pad);
+        $styleText = get_sub_field('module_text');
+        array_push($stylesInnerPrint, 'module-text-' . $styleText['size'], 'module-color-' . $styleText['color']);
+        $styleBg = get_sub_field('module_background');
+        $styleAni = get_sub_field('module_animate');
+        if($styleAni['on_enter']) { array_push($stylesOuterPrint, 'animate-on-enter'); }
+        if($styleAni['on_leave']) { array_push($stylesOuterPrint, 'animate-on-leave'); }
+        if($styleBg['settings']['color']) { array_push($stylesOuterPrint, 'module-bg-' . $styleBg['settings']['color']); }
+        if($styleBg['image']) {
+          $stylesBgInline = [];
+          $stylesBgClasses = ['module-bg'];
+          if($styleBg['settings']['parallax']) {
+            array_push($stylesBgClasses, 'animate-parallax');
+            array_push($stylesBgClasses, 'animate-z-' . $styleBg['settings']['intensity']);
+          }
+          array_push($stylesBgInline, 'background-image: url(' . $styleBg['image']['sizes']['jumbo'] . ')');
+          array_push($stylesBgInline, 'background-position: ' . $styleBg['settings']['position_x'] . ' ' . $styleBg['settings']['position_y']);
+          array_push($stylesBgInline, 'opacity: ' . $styleBg['settings']['opacity'] / 100);
+          $stylesBackground = '<div class="' . implode(' ', $stylesBgClasses) . '" style="' . implode('; ', $stylesBgInline) . '"></div>';
+        }
+        $classesInnerPrint = array_merge($classesInner, $pad, $stylesInnerPrint);
       }
-      $id = str_replace(' ', '-', strtolower($name));
-      array_push($classesOuter, 'module-' . $id, 'animate-on-enter');
-      $output .= '<section id="' . $id . '" class="' . implode(' ', $classesOuter) . '"' . $style . '>';
+      $id = str_replace(' ', '-', strtolower(get_sub_field('module_id')));
+      array_push($classesOuter, 'module-' . $name, implode(' ', $stylesOuterPrint));
+      $output .= '<section id="' . $id . '" class="' . implode(' ', array_merge($classesOuter, $stylesOuterPrint)) . '"' . $styleInline . '>';
+      if($stylesBackground) { $output .= $stylesBackground; }
       $output .= '<div class="' . implode(' ' , $classesInnerPrint) . '">';
     } elseif($position == 'end') {
       $output .= '</div>';

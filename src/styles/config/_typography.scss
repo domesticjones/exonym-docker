@@ -3,8 +3,8 @@
   ---------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i");
 
-$font-default: "Lato", sans-serif;
-$font-heading: "Lato", sans-serif;
+$font-default: 'Lato', sans-serif;
+$font-heading: 'Lato', sans-serif;
 
 $font-size: 16px;
 
@@ -36,7 +36,7 @@ $useMarkupItal: true;
     }
 
     @else {
-      font-family: $font-default;
+      font-family: $font-default; // Define custom font family
     }
   }
 }
@@ -48,7 +48,7 @@ $useMarkupItal: true;
     }
 
     @else {
-      font-style: normal;
+      font-style: $font-normal;
     }
   }
 
@@ -58,7 +58,7 @@ $useMarkupItal: true;
     }
 
     @else {
-      font-family: $font-default;
+      font-family: $font-default; // Define custom font family
     }
   }
 }
@@ -72,12 +72,8 @@ em {
 }
 
 small {
-  font-size: 0.75rem;
+  font-size: 0.75em;
 }
-
-/**
-  Body Typography Defaults
-  ---------------------------------------------------------------------- */
 
 
 /**
@@ -170,7 +166,7 @@ blockquote {
   margin: 0 0 1.25em 0;
   position: relative;
 
-  @include pseudo(before, block, absolute, '\201C') {
+  @include pseudo(before, '\201C', block, absolute) {
     font-family: Georgia, serif;
     font-size: 4em;
     @include fontBold();
